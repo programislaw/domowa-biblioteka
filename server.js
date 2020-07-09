@@ -6,7 +6,7 @@ const proxy = require('http-proxy-middleware')
 // Serve static files....
 app.use(express.static(__dirname + '/dist/domowa-biblioteka'));
 
-var apiProxy = proxy('/landing', {target: 'https://domowa-biblioteka.herokuapp.com/', changeOrigin: true });
+var apiProxy = proxy('/landing', {target: 'http://domowa-biblioteka.herokuapp.com/', changeOrigin: true });
 app.use(apiProxy)
 
 // Send all requests to index.html
